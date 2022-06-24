@@ -1,0 +1,29 @@
+<% if (products.length) { %>
+ 
+      <table class="table">
+         <thead>
+            <tr>            
+               <th scope="col">Nombre</th>
+               <th scope="col">Precio</th>
+               <th scope="col">Imagen</th>
+            </tr>
+         </thead>
+         <% products.forEach(producto=> { %>
+         <tbody>
+            <tr>               
+               <td>
+                  <%= producto.nombre %>
+               </td>
+               <td>
+                  $ <%= producto.precio %>
+               </td>
+               <td><img style="height: 50px; width: 50px;" src="<%= producto.url %> "></td>
+            </tr>
+         </tbody>
+         <% }) %>
+      </table>
+
+
+         <% } else { %>
+            <p> No hay productos</p>
+            <% } %>
